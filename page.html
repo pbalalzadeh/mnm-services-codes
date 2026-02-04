@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNM Services | Elite Crypto Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050508;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 16px 24px;
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #00f3ff;
+        }
+
+        .markup-badge {
+            background: linear-gradient(135deg, #ff006e, #ffbe0b);
+            color: black;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 32px;
+            }
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 24px 48px;
+            position: relative;
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .orb-1 {
+            background: #00f3ff;
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            left: -100px;
+        }
+
+        .orb-2 {
+            background: #bc13fe;
+            width: 350px;
+            height: 350px;
+            top: 30%;
+            right: -100px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            background: #0aff0a;
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: 30%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 9999px;
+            margin-bottom: 32px;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: #0aff0a;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .badge-text {
+            font-size: 12px;
+            color: #00f3ff;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 72px;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00f3ff, #bc13fe, #0aff0a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #9ca3af;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .premium-note {
+            color: #ff006e;
+            font-weight: 600;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .cat-btn {
+            padding: 12px 24px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .cat-btn:hover {
+            border-color: #00f3ff;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto 48px;
+        }
+
+        @media (min-width: 768px) {
+            .stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #9ca3af;
+            text-transform: uppercase;
+        }
+
+        .cyan { color: #00f3ff; }
+        .purple { color: #bc13fe; }
+        .green { color: #0aff0a; }
+        .pink { color: #ff006e; }
+
+        /* Calculator Section */
+        .calculator-section {
+            padding: 96px 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 48px;
+        }
+
+        .glass-panel {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 48px;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group label {
+            display: block;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+        }
+
+        select:disabled {
+            opacity: 0.5;
+        }
+
+        .result-box {
+            display: none;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(188, 19, 254, 0.1));
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-display {
+            font-size: 32px;
+            font-weight: bold;
+            color: #00f3ff;
+        }
+
+        .original-display {
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .btn-primary {
+            padding: 12px 24px;
+            background: #00f3ff;
+            color: black;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-gradient {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .quote-summary {
+            display: none;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quote-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .quote-price {
+            color: #00f3ff;
+            font-weight: bold;
+        }
+
+        .remove-btn {
+            background: none;
+            border: none;
+            color: #ff006e;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 12px;
+        }
+
+        .quote-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 16px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 96px 24px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            font-weight: bold;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #00f3ff;
+            box-shadow: 0 20px 40px rgba(0, 243, 255, 0.2);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .service-icon {
+            font-size: 32px;
+        }
+
+        .service-price-box {
+            text-align: right;
+        }
+
+        .service-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        /* Packages Section */
+        .packages-section {
+            padding: 96px 24px;
+        }
+
+        .packages-grid {
+            display: grid;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .package-card {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .package-card.featured {
+            border: 2px solid rgba(0, 243, 255, 0.5);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            padding: 4px 16px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .package-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .package-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .package-price {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .package-original {
+            font-size: 14px;
+            color: #666;
+            text-decoration: line-through;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            margin-bottom: 8px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #00f3ff;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 96px 24px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .category {
+            margin-bottom: 48px;
+        }
+
+        .category-header {
+            width: 100%;
+            padding: 24px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.2), rgba(188, 19, 254, 0.2));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        .category-content.open {
+            max-height: 2000px;
+            opacity: 1;
+        }
+
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            margin-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            .service-row {
+                margin-left: 64px;
+            }
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 96px 24px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(188, 19, 254, 0.1));
+        }
+
+        .cta-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 24px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .footer-logo span {
+            color: #00f3ff;
+        }
+
+        .footer-note {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MNM<span>SERVICES</span> <span class="markup-badge">+30%</span></div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+        <a href="#calculator" class="cta-button">Get Quote</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        
+        <div class="hero-content">
+            <div class="badge">
+                <div class="pulse"></div>
+                <span class="badge-text">September 2025 Price List</span>
+                <span class="markup-badge">+30%</span>
+            </div>
+            
+            <h1>Elite <span class="gradient-text">Crypto Marketing</span> & Listing Services</h1>
+            
+            <p class="subtitle">
+                Fast-track listings, trending campaigns, and viral marketing solutions for the next generation of blockchain projects.
+                <span class="premium-note">All prices include 30% premium service fee</span>
+            </p>
+            
+            <div class="category-buttons">
+                <a href="#listings" class="cat-btn">🔤 Listings</a>
+                <a href="#trending" class="cat-btn">📈 Trending</a>
+                <a href="#community" class="cat-btn">👥 Community</a>
+                <a href="#marketing" class="cat-btn">🚀 Marketing</a>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number cyan">50+</div>
+                    <div class="stat-label">Platforms</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number purple">24h</div>
+                    <div class="stat-label">Fast Track</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number green">100%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number pink">+30%</div>
+                    <div class="stat-label">Premium</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 class="section-title">Service <span class="gradient-text">Calculator</span></h2>
+            <p class="section-subtitle">Prices include 30% premium markup</p>
+            
+            <div class="glass-panel">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Select Category</label>
+                        <select id="calc-category" onchange="updateServices()">
+                            <option value="">Choose Category...</option>
+                            <option value="listings">Listings & Verifications</option>
+                            <option value="trending">Trending & Visibility</option>
+                            <option value="community">Community Growth</option>
+                            <option value="marketing">Advertising & Media</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Select Service</label>
+                        <select id="calc-service" onchange="calculatePrice()" disabled>
+                            <option value="">Select Category First...</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="calc-result" class="result-box">
+                    <div class="result-header">
+                        <div>
+                            <div style="color: #9ca3af; font-size: 14px; margin-bottom: 4px;">
+                                Estimated Cost <span class="markup-badge">+30%</span>
+                            </div>
+                            <div id="calc-new-price" class="price-display">$0</div>
+                            <div id="calc-original" class="original-display">Original: $0</div>
+                        </div>
+                        <button onclick="addToQuote()" class="btn-primary">Add to Quote</button>
+                    </div>
+                </div>
+                
+                <div id="quote-summary" class="quote-summary">
+                    <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 16px;">Your Quote</h3>
+                    <div id="quote-items"></div>
+                    <div class="quote-total">
+                        <div style="font-size: 20px; font-weight: bold;">
+                            Total: <span id="quote-total" style="color: #00f3ff;">$0</span>
+                        </div>
+                        <button onclick="submitQuote()" class="btn-gradient">Request Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Service <span class="gradient-text">Categories</span></h2>
+            <p class="section-subtitle">Premium pricing with 30% markup for expedited service</p>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="filterServices('all')">All Services</button>
+                <button class="tab" onclick="filterServices('listings')">Listings</button>
+                <button class="tab" onclick="filterServices('trending')">Trending</button>
+                <button class="tab" onclick="filterServices('community')">Community</button>
+                <button class="tab" onclick="filterServices('marketing')">Marketing</button>
+            </div>
+            
+            <div id="services-grid" class="services-grid">
+                <!-- Services populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Packages</span></h2>
+            <p class="section-subtitle">All packages include 30% premium service markup</p>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-label" style="color: #00f3ff;">POPULAR</div>
+                    <h3 class="package-title">Listings Package</h3>
+                    <div class="package-price">$4,420</div>
+                    <span class="package-original">was $3,400</span>
+                    <ul class="feature-list">
+                        <li>Moontok Listing w/ tweet</li>
+                        <li>CnToken Listing w/ tweet</li>
+                        <li>Ntm.ai Listing w/ tweet</li>
+                        <li>CompareMarketcap Listing</li>
+                        <li>HKDefi Listing</li>
+                        <li>Stocktwits listing</li>
+                        <li>Avadex Logo & Link Update</li>
+                        <li>Birdeye Logo & Link Update</li>
+                    </ul>
+                    <button onclick="addPackage('listings')" class="btn-primary" style="width: 100%;">Select Package</button>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="package-badge">BEST VALUE</div>
+                    <div class="package-label" style="color: #bc13fe;">TRENDING</div>
+                    <h3 class="package-title">24h Trending Package</h3>
+                    <div class="package-price">$4,420</div>
+                    <span class="package-original">was $3,400</span>
+                    <ul class="feature-list">
+                        <li>Solscan search top 1-5 (24hrs)</li>
+                        <li>GeckoTerminal pool top 1-5</li>
+                        <li>Rugcheck most visited top 1-5</li>
+                        <li>Birdeye most visited/watched</li>
+                        <li>Solana.fm top 1-5</li>
+                        <li>OKX & Bitget trends top 1-5</li>
+                        <li>InsightX Bubblemaps top 1-5</li>
+                    </ul>
+                    <button onclick="addPackage('trending')" class="btn-gradient" style="width: 100%;">Select Package</button>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-label" style="color: #0aff0a;">WALLET</div>
+                    <h3 class="package-title">Web3 Wallet Package</h3>
+                    <div class="package-price">$5,850</div>
+                    <span class="package-original">was $4,500</span>
+                    <ul class="feature-list">
+                        <li>Ledger Wallet Listing</li>
+                        <li>Bitget Wallet Integration</li>
+                        <li>Binance Wallet Listing</li>
+                        <li>Gate.io Wallet Support</li>
+                        <li>OKX Wallet Integration</li>
+                        <li>Priority Support</li>
+                        <li>Fast Track Processing</li>
+                    </ul>
+                    <button onclick="addPackage('wallet')" class="btn-primary" style="width: 100%; background: #0aff0a;">Select Package</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Complete <span class="gradient-text">Price List</span></h2>
+            <p class="section-subtitle">All prices include 30% premium service fee</p>
+            
+            <!-- Category 1: Listings -->
+            <div id="listings" class="category">
+                <div class="category-header" onclick="toggleCategory('cat-listings', 'arrow-listings')">
+                    <div class="category-title">
+                        <div class="category-icon">🔤</div>
+                        <div>
+                            <h3>1. Listings & Verifications</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">Exchange listings, verifications, and supply updates</p>
+                        </div>
+                    </div>
+                    <svg id="arrow-listings" style="width: 24px; height: 24px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div id="cat-listings" class="category-content open">
+                    <div class="service-row">
+                        <span>CG Listing (Fast Track)</span>
+                        <div>
+                            <span class="original-price">$650</span>
+                            <span class="price-tag">$845</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC Listing (Fast Track)</span>
+                        <div>
+                            <span class="original-price">$5,400</span>
+                            <span class="price-tag">$7,020</span>
+                        </div>
+                    </div>
+                    <div class="service-row" style="border: 1px solid rgba(0, 243, 255, 0.3);">
+                        <span><strong>Listings Package</strong> (Complete bundle)</span>
+                        <div>
+                            <span class="original-price">$3,400</span>
+                            <span class="price-tag">$4,420</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CG Verification Supply</span>
+                        <div>
+                            <span class="original-price">$600</span>
+                            <span class="price-tag">$780</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC Verification</span>
+                        <div>
+                            <span class="original-price">$3,200</span>
+                            <span class="price-tag">$4,160</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC/CG Supply Verify (3-5 days)</span>
+                        <div>
+                            <span class="original-price">$3,000</span>
+                            <span class="price-tag">$3,900</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC/CG Supply Verify (24h)</span>
+                        <div>
+                            <span class="original-price">$4,200</span>
+                            <span class="price-tag" style="color: #00f3ff;">$5,460</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC Tags</span>
+                        <div>
+                            <span class="original-price">$350</span>
+                            <span class="price-tag">$455</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC Community Blue Tick</span>
+                        <div>
+                            <span class="original-price">$350</span>
+                            <span class="price-tag">$455</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>All Voting Websites (20+ sites)</span>
+                        <div>
+                            <span class="original-price">$500</span>
+                            <span class="price-tag">$650</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Dextools & Dexscreener Votes</span>
+                        <div>
+                            <span class="original-price">$350</span>
+                            <span class="price-tag">$455</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CompareMarketcap vs Project</span>
+                        <div>
+                            <span class="original-price">$400</span>
+                            <span class="price-tag">$520</span>
+                        </div>
+                    </div>
+                    <div class="service-row" style="border: 1px solid rgba(0, 243, 255, 0.3);">
+                        <span><strong>Web3 Wallet Package (Full)</strong></span>
+                        <div>
+                            <span class="original-price">$4,500</span>
+                            <span class="price-tag" style="color: #00f3ff;">$5,850</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Web3 Wallet Package (Alt)</span>
+                        <div>
+                            <span class="original-price">$2,750</span>
+                            <span class="price-tag">$3,575</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Trust Wallet Swap + Logo (24h)</span>
+                        <div>
+                            <span class="original-price">$3,500</span>
+                            <span class="price-tag">$4,550</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Metamask Updates</span>
+                        <div>
+                            <span class="original-price">$2,650</span>
+                            <span class="price-tag">$3,445</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Trending -->
+            <div id="trending" class="category">
+                <div class="category-header" onclick="toggleCategory('cat-trending', 'arrow-trending')">
+                    <div class="category-title">
+                        <div class="category-icon" style="background: linear-gradient(135deg, rgba(188, 19, 254, 0.2), rgba(188, 19, 254, 0.2));">📈</div>
+                        <div>
+                            <h3>2. Trending & Visibility Boosts</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">24h trending, search rankings, and platform visibility</p>
+                        </div>
+                    </div>
+                    <svg id="arrow-trending" style="width: 24px; height: 24px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div id="cat-trending" class="category-content">
+                    <div class="service-row" style="border: 1px solid rgba(188, 19, 254, 0.3);">
+                        <span><strong>24h Trending Package</strong> (Complete visibility boost)</span>
+                        <div>
+                            <span class="original-price">$3,400</span>
+                            <span class="price-tag" style="color: #bc13fe;">$4,420</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>OKX Dex Trending (per day)</span>
+                        <div>
+                            <span class="original-price">$650</span>
+                            <span class="price-tag">$845</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>BitGet Dex Trending (per day)</span>
+                        <div>
+                            <span class="original-price">$650</span>
+                            <span class="price-tag">$845</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Dexscreener Trending (SOL)</span>
+                        <div>
+                            <span class="original-price">$4,000</span>
+                            <span class="price-tag" style="color: #bc13fe;">$5,200</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Crypto.com Trending (per week)</span>
+                        <div>
+                            <span class="original-price">$1,250</span>
+                            <span class="price-tag">$1,625</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>GeckoTerminal Trending (per week)</span>
+                        <div>
+                            <span class="original-price">$2,100</span>
+                            <span class="price-tag">$2,730</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Birdeye Trending (per week)</span>
+                        <div>
+                            <span class="original-price">$2,100</span>
+                            <span class="price-tag">$2,730</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CoinGecko Trending (per week)</span>
+                        <div>
+                            <span class="original-price">$2,250</span>
+                            <span class="price-tag">$2,925</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Twitter/X Trending (1 hour)</span>
+                        <div>
+                            <span class="original-price">$750</span>
+                            <span class="price-tag">$975</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Community -->
+            <div id="community" class="category">
+                <div class="category-header" onclick="toggleCategory('cat-community', 'arrow-community')">
+                    <div class="category-title">
+                        <div class="category-icon" style="background: linear-gradient(135deg, rgba(10, 255, 10, 0.2), rgba(10, 255, 10, 0.2));">👥</div>
+                        <div>
+                            <h3>3. Community Growth & Engagement</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">Shillers, chatters, and community building</p>
+                        </div>
+                    </div>
+                    <svg id="arrow-community" style="width: 24px; height: 24px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div id="cat-community" class="category-content">
+                    <div class="service-row">
+                        <div>
+                            <strong>Shillers Standard</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">1 week, 100 shillers (30 blue tick)</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$1,000</span>
+                            <span class="price-tag">$1,300</span>
+                        </div>
+                    </div>
+                    <div class="service-row" style="border: 1px solid rgba(10, 255, 10, 0.3);">
+                        <div>
+                            <strong>Shillers Premium</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">1 week, 24/7 raiding</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$1,500</span>
+                            <span class="price-tag" style="color: #0aff0a;">$1,950</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <div>
+                            <strong>Chatters 24/7</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">24/7 for 1 week</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$600</span>
+                            <span class="price-tag">$780</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC Community Creation</span>
+                        <div>
+                            <span class="original-price">$220</span>
+                            <span class="price-tag">$286</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Marketing -->
+            <div id="marketing" class="category">
+                <div class="category-header" onclick="toggleCategory('cat-marketing', 'arrow-marketing')">
+                    <div class="category-title">
+                        <div class="category-icon" style="background: linear-gradient(135deg, rgba(255, 0, 110, 0.2), rgba(255, 0, 110, 0.2));">🚀</div>
+                        <div>
+                            <h3>4. Advertising & Media</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">Press releases, ad placements, and billboards</p>
+                        </div>
+                    </div>
+                    <svg id="arrow-marketing" style="width: 24px; height: 24px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div id="cat-marketing" class="category-content">
+                    <div class="service-row">
+                        <div>
+                            <strong>Press Release Package</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">500 sites incl. Binance Square, CMC, etc.</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$750</span>
+                            <span class="price-tag">$975</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>4chan Ads (1 week)</span>
+                        <div>
+                            <span class="original-price">$1,750</span>
+                            <span class="price-tag">$2,275</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Banner Ads (15 websites, 1 week)</span>
+                        <div>
+                            <span class="original-price">$2,750</span>
+                            <span class="price-tag">$3,575</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>CMC Ads (per day)</span>
+                        <div>
+                            <span class="original-price">$1,600</span>
+                            <span class="price-tag">$2,080</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Etherscan Ads (per week)</span>
+                        <div>
+                            <span class="original-price">$3,300</span>
+                            <span class="price-tag">$4,290</span>
+                        </div>
+                    </div>
+                    <div class="service-row" style="border: 1px solid rgba(255, 0, 110, 0.3);">
+                        <div>
+                            <strong>Telegram Ads</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">50 bots, Trojan/Maestro, 1 week</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$5,500</span>
+                            <span class="price-tag" style="color: #ff006e;">$7,150</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>Las Vegas Billboard (1 week)</span>
+                        <div>
+                            <span class="original-price">$1,600</span>
+                            <span class="price-tag">$2,080</span>
+                        </div>
+                    </div>
+                    <div class="service-row" style="border: 1px solid rgba(255, 0, 110, 0.3);">
+                        <div>
+                            <strong>Vegas & SpaceX Billboard</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">Dual location, 1 week</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$2,500</span>
+                            <span class="price-tag" style="color: #ff006e;">$3,250</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: Influencer -->
+            <div class="category">
+                <div class="category-header" onclick="toggleCategory('cat-influencer', 'arrow-influencer')">
+                    <div class="category-title">
+                        <div class="category-icon" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.2));">⭐</div>
+                        <div>
+                            <h3>5. Influencer Marketing</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">YouTubers, TikTokers, and Chinese marketing</p>
+                        </div>
+                    </div>
+                    <svg id="arrow-influencer" style="width: 24px; height: 24px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div id="cat-influencer" class="category-content">
+                    <div class="service-row">
+                        <span>12 USA YouTubers Package</span>
+                        <div>
+                            <span class="original-price">$8,500</span>
+                            <span class="price-tag">$11,050</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>30 Brazilian YouTubers Package</span>
+                        <div>
+                            <span class="original-price">$7,500</span>
+                            <span class="price-tag">$9,750</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <span>TikTokers Package</span>
+                        <div>
+                            <span class="original-price">$8,500</span>
+                            <span class="price-tag">$11,050</span>
+                        </div>
+                    </div>
+                    <div class="service-row" style="border: 1px solid rgba(251, 191, 36, 0.3);">
+                        <div>
+                            <strong>WeChat Shilling & RedNote Posters</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">Chinese market penetration</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$4,000</span>
+                            <span class="price-tag" style="color: #fbbf24;">$5,200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 6: Special -->
+            <div class="category">
+                <div class="category-header" onclick="toggleCategory('cat-special', 'arrow-special')">
+                    <div class="category-title">
+                        <div class="category-icon" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.2));">🎯</div>
+                        <div>
+                            <h3>6. Special Campaigns</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">Reddit campaigns and unique exposure</p>
+                        </div>
+                    </div>
+                    <svg id="arrow-special" style="width: 24px; height: 24px; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div id="cat-special" class="category-content">
+                    <div class="service-row">
+                        <div>
+                            <strong>Reddit Campaign</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">50 sub-alts + CMS (1 week)</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$2,850</span>
+                            <span class="price-tag">$3,705</span>
+                        </div>
+                    </div>
+                    <div class="service-row">
+                        <div>
+                            <strong>CompareMarketcap Exposure</strong>
+                            <p style="color: #9ca3af; font-size: 12px;">vs another project</p>
+                        </div>
+                        <div>
+                            <span class="original-price">$400</span>
+                            <span class="price-tag">$520</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to <span class="gradient-text">Launch</span>?</h2>
+            <p style="font-size: 18px; color: #d1d5db; margin-bottom: 8px;">Get in touch with our team for custom packages and bulk discounts.</p>
+            <p style="color: #ff006e; font-weight: 600; margin-bottom: 32px;">All prices include 30% premium service fee</p>
+            <div class="cta-buttons">
+                <a href="#calculator" class="btn-primary" style="text-decoration: none;">Calculate Your Quote</a>
+                <a href="https://t.me/yourusername" target="_blank" class="cat-btn" style="font-size: 16px;">Contact on Telegram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MNM<span>SERVICES</span></div>
+            <div style="text-align: center;">
+                <div class="footer-note">© 2025 MNM Services. All rights reserved.</div>
+                <div style="color: #ff006e; font-size: 12px; margin-top: 4px;">Sept 2025 Price List • All prices include 30% premium markup</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Service database with 30% markup
+        const servicesDB = {
+            listings: [
+                {name: "CG Listing (Fast Track)", price: 845, original: 650, icon: "🔤"},
+                {name: "CMC Listing (Fast Track)", price: 7020, original: 5400, icon: "🔤"},
+                {name: "Listings Package", price: 4420, original: 3400, icon: "🔤"},
+                {name: "CG Verification Supply", price: 780, original: 600, icon: "🔤"},
+                {name: "CMC Verification", price: 4160, original: 3200, icon: "🔤"},
+                {name: "CMC/CG Supply Verify (3-5 days)", price: 3900, original: 3000, icon: "🔤"},
+                {name: "CMC/CG Supply Verify (24h)", price: 5460, original: 4200, icon: "🔤"},
+                {name: "CMC Tags", price: 455, original: 350, icon: "🔤"},
+                {name: "CMC Community Blue Tick", price: 455, original: 350, icon: "🔤"},
+                {name: "All Voting Websites (20+)", price: 650, original: 500, icon: "🔤"},
+                {name: "Dextools & Dexscreener Votes", price: 455, original: 350, icon: "🔤"},
+                {name: "CompareMarketcap vs Project", price: 520, original: 400, icon: "🔤"},
+                {name: "Web3 Wallet Package (Full)", price: 5850, original: 4500, icon: "🔤"},
+                {name: "Web3 Wallet Package (Alt)", price: 3575, original: 2750, icon: "🔤"},
+                {name: "Trust Wallet Swap + Logo", price: 4550, original: 3500, icon: "🔤"},
+                {name: "Metamask Updates", price: 3445, original: 2650, icon: "🔤"}
+            ],
+            trending: [
+                {name: "24h Trending Package", price: 4420, original: 3400, icon: "📈"},
+                {name: "OKX Dex Trending (1 day)", price: 845, original: 650, icon: "📈"},
+                {name: "BitGet Dex Trending (1 day)", price: 845, original: 650, icon: "📈"},
+                {name: "Dexscreener Trending (SOL)", price: 5200, original: 4000, icon: "📈"},
+                {name: "Crypto.com Trending (1 week)", price: 1625, original: 1250, icon: "📈"},
+                {name: "GeckoTerminal Trending (1 week)", price: 2730, original: 2100, icon: "📈"},
+                {name: "Birdeye Trending (1 week)", price: 2730, original: 2100, icon: "📈"},
+                {name: "CoinGecko Trending (1 week)", price: 2925, original: 2250, icon: "📈"},
+                {name: "Twitter/X Trending (1 hour)", price: 975, original: 750, icon: "📈"}
+            ],
+            community: [
+                {name: "Shillers Standard (1 week)", price: 1300, original: 1000, icon: "👥"},
+                {name: "Shillers Premium (1 week)", price: 1950, original: 1500, icon: "👥"},
+                {name: "Chatters 24/7 (1 week)", price: 780, original: 600, icon: "👥"},
+                {name: "CMC Community Creation", price: 286, original: 220, icon: "👥"}
+            ],
+            marketing: [
+                {name: "Press Release (500 sites)", price: 975, original: 750, icon: "🚀"},
+                {name: "4chan Ads (1 week)", price: 2275, original: 1750, icon: "🚀"},
+                {name: "Banner Ads (15 sites, 1 week)", price: 3575, original: 2750, icon: "🚀"},
+                {name: "CMC Ads (1 day)", price: 2080, original: 1600, icon: "🚀"},
+                {name: "Etherscan Ads (1 week)", price: 4290, original: 3300, icon: "🚀"},
+                {name: "Telegram Ads (50 bots, 1 week)", price: 7150, original: 5500, icon: "🚀"},
+                {name: "Las Vegas Billboard (1 week)", price: 2080, original: 1600, icon: "🚀"},
+                {name: "Vegas & SpaceX Billboard", price: 3250, original: 2500, icon: "🚀"},
+                {name: "12 USA YouTubers", price: 11050, original: 8500, icon: "🚀"},
+                {name: "30 Brazilian YouTubers", price: 9750, original: 7500, icon: "🚀"},
+                {name: "TikTokers Package", price: 11050, original: 8500, icon: "🚀"},
+                {name: "WeChat & RedNote", price: 5200, original: 4000, icon: "🚀"},
+                {name: "Reddit Campaign (1 week)", price: 3705, original: 2850, icon: "🚀"},
+                {name: "CompareMarketcap Exposure", price: 520, original: 400, icon: "🚀"}
+            ]
+        };
+
+        // Packages
+        const packages = {
+            listings: {name: "Listings Package", price: 4420, original: 3400},
+            trending: {name: "24h Trending Package", price: 4420, original: 3400},
+            wallet: {name: "Web3 Wallet Package", price: 5850, original: 4500}
+        };
+
+        // Quote state
+        let quoteItems = [];
+        let quoteTotal = 0;
+
+        // Initialize services grid
+        function initServices() {
+            const grid = document.getElementById('services-grid');
+            let allServices = [];
+            
+            Object.keys(servicesDB).forEach(category => {
+                servicesDB[category].forEach(service => {
+                    allServices.push({...service, category});
+                });
+            });
+            
+            // Show first 6 services
+            const featured = allServices.slice(0, 6);
+            
+            grid.innerHTML = featured.map(service => `
+                <div class="service-card" onclick="addServiceToQuote('${service.name}', ${service.price})">
+                    <div class="service-header">
+                        <div class="service-icon">${service.icon}</div>
+                        <div class="service-price-box">
+                            <div class="original-price">$${service.original.toLocaleString()}</div>
+                            <div class="price-tag">$${service.price.toLocaleString()}</div>
+                        </div>
+                    </div>
+                    <h3 class="service-title">${service.name}</h3>
+                    <p class="service-desc">Click to add to calculator</p>
+                    <span class="markup-badge">+30%</span>
+                </div>
+            `).join('');
+        }
+
+        // Filter services
+        function filterServices(category) {
+            // Update tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Filter grid
+            const grid = document.getElementById('services-grid');
+            let services = [];
+            
+            if (category === 'all') {
+                Object.keys(servicesDB).forEach(cat => {
+                    servicesDB[cat].forEach(s => services.push({...s, category: cat}));
+                });
+            } else {
+                services = servicesDB[category].map(s => ({...s, category}));
+            }
+            
+            const featured = services.slice(0, 6);
+            
+            grid.innerHTML = featured.map(service => `
+                <div class="service-card" onclick="addServiceToQuote('${service.name}', ${service.price})">
+                    <div class="service-header">
+                        <div class="service-icon">${service.icon}</div>
+                        <div class="service-price-box">
+                            <div class="original-price">$${service.original.toLocaleString()}</div>
+                            <div class="price-tag">$${service.price.toLocaleString()}</div>
+                        </div>
+                    </div>
+                    <h3 class="service-title">${service.name}</h3>
+                    <p class="service-desc">Click to add to calculator</p>
+                    <span class="markup-badge">+30%</span>
+                </div>
+            `).join('');
+        }
+
+        // Calculator functions
+        function updateServices() {
+            const category = document.getElementById('calc-category').value;
+            const serviceSelect = document.getElementById('calc-service');
+            
+            if (!category) {
+                serviceSelect.disabled = true;
+                serviceSelect.innerHTML = '<option value="">Select Category First...</option>';
+                return;
+            }
+            
+            serviceSelect.disabled = false;
+            serviceSelect.innerHTML = '<option value="">Choose Service...</option>';
+            
+            servicesDB[category].forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.price;
+                option.setAttribute('data-original', service.original);
+                option.setAttribute('data-name', service.name);
+                option.textContent = `${service.name} - $${service.price.toLocaleString()}`;
+                serviceSelect.appendChild(option);
+            });
+            
+            document.getElementById('calc-result').style.display = 'none';
+        }
+
+        function calculatePrice() {
+            const select = document.getElementById('calc-service');
+            const option = select.options[select.selectedIndex];
+            const price = option.value;
+            const original = option.getAttribute('data-original');
+            
+            if (price) {
+                document.getElementById('calc-new-price').textContent = '$' + parseInt(price).toLocaleString();
+                document.getElementById('calc-original').textContent = 'Original: $' + parseInt(original).toLocaleString();
+                document.getElementById('calc-result').style.display = 'block';
+            }
+        }
+
+        function addToQuote() {
+            const select = document.getElementById('calc-service');
+            const option = select.options[select.selectedIndex];
+            const name = option.getAttribute('data-name');
+            const price = parseInt(option.value);
+            
+            if (!name || !price) return;
+            
+            quoteItems.push({name, price});
+            quoteTotal += price;
+            updateQuoteDisplay();
+        }
+
+        function addServiceToQuote(name, price) {
+            quoteItems.push({name, price});
+            quoteTotal += price;
+            updateQuoteDisplay();
+            document.getElementById('calculator').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function addPackage(type) {
+            const pkg = packages[type];
+            quoteItems.push({name: pkg.name, price: pkg.price});
+            quoteTotal += pkg.price;
+            updateQuoteDisplay();
+            document.getElementById('calculator').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function updateQuoteDisplay() {
+            const summary = document.getElementById('quote-summary');
+            const itemsList = document.getElementById('quote-items');
+            const totalDisplay = document.getElementById('quote-total');
+            
+            if (quoteItems.length === 0) {
+                summary.style.display = 'none';
+                return;
+            }
+            
+            summary.style.display = 'block';
+            
+            itemsList.innerHTML = quoteItems.map((item, index) => `
+                <div class="quote-item">
+                    <span>${item.name}</span>
+                    <div>
+                        <span class="quote-price">$${item.price.toLocaleString()}</span>
+                        <button class="remove-btn" onclick="removeItem(${index})">×</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            totalDisplay.textContent = '$' + quoteTotal.toLocaleString();
+        }
+
+        function removeItem(index) {
+            quoteTotal -= quoteItems[index].price;
+            quoteItems.splice(index, 1);
+            updateQuoteDisplay();
+        }
+
+        function submitQuote() {
+            if (quoteItems.length === 0) return;
+            
+            const message = `Hi! I'm interested in the following MNM Services:\n\n${quoteItems.map(i => `• ${i.name}: $${i.price.toLocaleString()}`).join('\n')}\n\nTotal: $${quoteTotal.toLocaleString()}\n\nPlease contact me with next steps.`;
+            
+            // Replace 'yourusername' with your actual Telegram username
+            window.open(`https://t.me/yourusername?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Accordion toggle
+        function toggleCategory(contentId, arrowId) {
+            const content = document.getElementById(contentId);
+            const arrow = document.getElementById(arrowId);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                content.style.maxHeight = '0px';
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initServices();
+            
+            // Open first category by default
+            const firstCategory = document.getElementById('cat-listings');
+            if (firstCategory) {
+                firstCategory.classList.add('open');
+                firstCategory.style.maxHeight = firstCategory.scrollHeight + 'px';
+            }
+        });
+
+        console.log('MNM Services Loaded - All prices include 30% markup');
+    </script>
+
+</body>
+</html>
