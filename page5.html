@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNM Agency | AI-Powered Growth Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050508;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 16px 24px;
+            background: rgba(20, 20, 30, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #00f3ff;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 32px;
+            }
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00f3ff;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 24px 48px;
+            position: relative;
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .orb-1 {
+            background: #00f3ff;
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            left: -100px;
+        }
+
+        .orb-2 {
+            background: #bc13fe;
+            width: 350px;
+            height: 350px;
+            top: 30%;
+            right: -100px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            background: #0aff0a;
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: 30%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 9999px;
+            margin-bottom: 32px;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: #0aff0a;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .badge-text {
+            font-size: 12px;
+            color: #00f3ff;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 64px;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00f3ff, #bc13fe, #0aff0a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #9ca3af;
+            max-width: 700px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .cat-btn {
+            padding: 12px 24px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .cat-btn:hover {
+            border-color: #00f3ff;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section - New AI Stats */
+        .ai-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 768px) {
+            .ai-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ai-stat-card {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00f3ff, #bc13fe);
+        }
+
+        .ai-stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .ai-stat-label {
+            font-size: 14px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Growth Journey Button */
+        .growth-journey-section {
+            padding: 48px 24px;
+            text-align: center;
+            background: linear-gradient(180deg, transparent, rgba(0, 243, 255, 0.05));
+        }
+
+        .growth-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            border: none;
+            border-radius: 9999px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(0, 243, 255, 0.3);
+        }
+
+        .growth-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 243, 255, 0.4);
+        }
+
+        .growth-btn svg {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s;
+        }
+
+        .growth-btn:hover svg {
+            transform: translateX(5px);
+        }
+
+        /* Why AI Section */
+        .why-ai-section {
+            padding: 96px 24px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .why-ai-grid {
+            display: grid;
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .why-ai-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .why-ai-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+
+        .why-ai-content p {
+            color: #9ca3af;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .advantage-list {
+            list-style: none;
+        }
+
+        .advantage-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .advantage-list li::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            border-radius: 50%;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .advantage-list strong {
+            color: white;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .advantage-list span {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .why-ai-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .why-ai-stats {
+                padding-left: 48px;
+            }
+        }
+
+        .why-ai-stat {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .why-ai-stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #00f3ff;
+            margin-bottom: 4px;
+        }
+
+        .why-ai-stat-label {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 96px 24px;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.05), rgba(188, 19, 254, 0.05));
+        }
+
+        .testimonials-grid {
+            display: grid;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 60px;
+            color: rgba(0, 243, 255, 0.2);
+            line-height: 1;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 16px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: #d1d5db;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: black;
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 96px 24px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .contact-section > .container > p {
+            color: #9ca3af;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        .contact-form {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 48px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00f3ff;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 96px 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Vertical Cards */
+        .verticals-grid {
+            display: grid;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .verticals-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .verticals-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .vertical-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vertical-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00f3ff, #bc13fe);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .vertical-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 243, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 243, 255, 0.1);
+        }
+
+        .vertical-card:hover::before {
+            opacity: 1;
+        }
+
+        .vertical-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .vertical-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .vertical-desc {
+            font-size: 14px;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+
+        /* Services Tabs */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            font-weight: bold;
+        }
+
+        .tab:hover:not(.active) {
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 243, 255, 0.3);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .service-icon {
+            font-size: 28px;
+        }
+
+        .service-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00f3ff;
+        }
+
+        .service-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .service-desc {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+
+        .service-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 9999px;
+            font-size: 11px;
+            color: #00f3ff;
+            margin-top: 12px;
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-panel {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .calc-form-group label {
+            display: block;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .result-box {
+            display: none;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(188, 19, 254, 0.1));
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .price-display {
+            font-size: 32px;
+            font-weight: bold;
+            color: #00f3ff;
+        }
+
+        .btn-primary {
+            padding: 12px 24px;
+            background: #00f3ff;
+            color: black;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-gradient {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .btn-gradient:hover {
+            transform: scale(1.05);
+        }
+
+        .quote-summary {
+            display: none;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quote-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .quote-price {
+            color: #00f3ff;
+            font-weight: bold;
+        }
+
+        .remove-btn {
+            background: none;
+            border: none;
+            color: #ff006e;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 12px;
+        }
+
+        .quote-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 16px;
+        }
+
+        /* Pricing Tables */
+        .pricing-section {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .category {
+            margin-bottom: 32px;
+        }
+
+        .category-header {
+            width: 100%;
+            padding: 24px;
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-header:hover {
+            border-color: rgba(0, 243, 255, 0.3);
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.2), rgba(188, 19, 254, 0.2));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        .category-content.open {
+            max-height: 4000px;
+            opacity: 1;
+        }
+
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            margin-left: 0;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .service-row {
+                margin-left: 64px;
+            }
+        }
+
+        .service-info {
+            flex: 1;
+        }
+
+        .service-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .service-note {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .price-tag {
+            color: #00f3ff;
+            font-weight: bold;
+            font-size: 18px;
+            white-space: nowrap;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(188, 19, 254, 0.1));
+        }
+
+        .cta-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 24px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .footer-logo span {
+            color: #00f3ff;
+        }
+
+        .footer-note {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Package Cards */
+        .packages-grid {
+            display: grid;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .package-card {
+            background: rgba(20, 20, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 32px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 243, 255, 0.3);
+        }
+
+        .package-card.featured {
+            border: 2px solid rgba(0, 243, 255, 0.5);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            padding: 4px 16px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .package-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .package-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .package-price {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .feature-list li {
+            padding-left: 1.5rem;
+            margin-bottom: 8px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #00f3ff;
+        }
+
+        .vertical-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .badge-crypto { background: rgba(0, 243, 255, 0.2); color: #00f3ff; }
+        .badge-ecommerce { background: rgba(188, 19, 254, 0.2); color: #bc13fe; }
+        .badge-creator { background: rgba(255, 0, 110, 0.2); color: #ff006e; }
+        .badge-business { background: rgba(10, 255, 10, 0.2); color: #0aff0a; }
+        .badge-content { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: rgba(20, 20, 30, 0.95);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .modal p {
+            color: #9ca3af;
+            margin-bottom: 24px;
+        }
+
+        .modal-form input {
+            width: 100%;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .modal-form button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #00f3ff, #bc13fe);
+            color: black;
+            border: none;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MNM<span>AGENCY</span></div>
+        <div class="nav-links">
+            <a href="#verticals">Industries</a>
+            <a href="#services">Services</a>
+            <a href="#why-ai">Why AI</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="cta-button" onclick="openGrowthModal()">Start Your Growth Journey</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        
+        <div class="hero-content">
+            <div class="badge">
+                <div class="pulse"></div>
+                <span class="badge-text">AI-Powered Marketing Agency</span>
+            </div>
+            
+            <h1>Marketing That <span class="gradient-text">Moves at the Speed of AI</span></h1>
+            
+            <p class="subtitle">
+                We combine cutting-edge AI with creative excellence to deliver marketing that scales. Built for crypto startups, e-commerce brands, creators, and ambitious businesses ready to dominate.
+            </p>
+            
+            <div class="category-buttons">
+                <a href="#crypto" class="cat-btn">🚀 Crypto</a>
+                <a href="#ecommerce" class="cat-btn">🛒 E-Commerce</a>
+                <a href="#creators" class="cat-btn">📸 Creators</a>
+                <a href="#content" class="cat-btn">🎬 Content</a>
+                <a href="#business" class="cat-btn">💼 Business</a>
+            </div>
+
+            <!-- AI Stats Section -->
+            <div class="ai-stats">
+                <div class="ai-stat-card">
+                    <div class="ai-stat-number">10x</div>
+                    <div class="ai-stat-label">Faster Content Creation</div>
+                </div>
+                <div class="ai-stat-card">
+                    <div class="ai-stat-number">300%</div>
+                    <div class="ai-stat-label">Average ROI Increase</div>
+                </div>
+                <div class="ai-stat-card">
+                    <div class="ai-stat-number">24/7</div>
+                    <div class="ai-stat-label">AI-Powered Operations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Journey Button Section -->
+    <section class="growth-journey-section">
+        <button class="growth-btn" onclick="openGrowthModal()">
+            Start Your Growth Journey
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+        </button>
+        <p style="color: #9ca3af; margin-top: 16px; font-size: 14px;">Get a free strategy session. No commitment required.</p>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="verticals">
+        <div class="container">
+            <h2 class="section-title">Who We <span class="gradient-text">Serve</span></h2>
+            <p class="section-subtitle">Specialized marketing solutions tailored to your industry</p>
+            
+            <div class="verticals-grid">
+                <div class="vertical-card" onclick="filterByVertical('crypto')">
+                    <div class="vertical-icon">🚀</div>
+                    <h3 class="vertical-title">Crypto & Web3</h3>
+                    <p class="vertical-desc">Exchange listings, trending campaigns, community building, and viral marketing for blockchain projects.</p>
+                </div>
+                
+                <div class="vertical-card" onclick="filterByVertical('ecommerce')">
+                    <div class="vertical-icon">🛒</div>
+                    <h3 class="vertical-title">E-Commerce</h3>
+                    <p class="vertical-desc">Shopify optimization, Facebook/Instagram/TikTok ads, email marketing, and conversion optimization.</p>
+                </div>
+                
+                <div class="vertical-card" onclick="filterByVertical('creators')">
+                    <div class="vertical-icon">📸</div>
+                    <h3 class="vertical-title">Creators & Influencers</h3>
+                    <p class="vertical-desc">TikTok & Instagram growth, DM automation, monetization, brand partnerships, and UGC creation.</p>
+                </div>
+                
+                <div class="vertical-card" onclick="filterByVertical('content')">
+                    <div class="vertical-icon">🎬</div>
+                    <h3 class="vertical-title">Content Production</h3>
+                    <p class="vertical-desc">3D animation, motion design, UGC creation, and full-service influencer campaign management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+            <p class="section-subtitle">Browse by category or filter by your industry</p>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="filterServices('all')">All Services</button>
+                <button class="tab" onclick="filterServices('paid')">Paid Ads</button>
+                <button class="tab" onclick="filterServices('social')">Social Media</button>
+                <button class="tab" onclick="filterServices('automation')">Automation</button>
+                <button class="tab" onclick="filterServices('content')">Content & UGC</button>
+                <button class="tab" onclick="filterServices('influencer')">Influencers</button>
+                <button class="tab" onclick="filterServices('crypto')">🚀 Crypto</button>
+            </div>
+            
+            <div id="services-grid" class="services-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why AI Section -->
+    <section id="why-ai" class="why-ai-section">
+        <div class="why-ai-grid">
+            <div class="why-ai-content">
+                <h2>The MNM <span class="gradient-text">Advantage</span></h2>
+                <p>Traditional agencies can't keep up with the pace of modern marketing. Our AI infrastructure means you get enterprise-level capabilities at a fraction of the cost—with results that speak for themselves.</p>
+                
+                <ul class="advantage-list">
+                    <li>
+                        <strong>Speed:</strong>
+                        <span>What takes traditional agencies weeks, we deliver in days</span>
+                    </li>
+                    <li>
+                        <strong>Scale:</strong>
+                        <span>Produce unlimited content variations without quality drops</span>
+                    </li>
+                    <li>
+                        <strong>Precision:</strong>
+                        <span>Data-driven decisions eliminate guesswork entirely</span>
+                    </li>
+                    <li>
+                        <strong>Cost:</strong>
+                        <span>Enterprise results at startup-friendly pricing</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="why-ai-stats">
+                <div class="why-ai-stat">
+                    <div class="why-ai-stat-number">85%</div>
+                    <div class="why-ai-stat-label">Reduction in Time-to-Market</div>
+                </div>
+                <div class="why-ai-stat">
+                    <div class="why-ai-stat-number">60%</div>
+                    <div class="why-ai-stat-label">Lower Customer Acquisition Cost</div>
+                </div>
+                <div class="why-ai-stat">
+                    <div class="why-ai-stat-number">4.2x</div>
+                    <div class="why-ai-stat-label">More Leads Generated</div>
+                </div>
+                <div class="why-ai-stat">
+                    <div class="why-ai-stat-number">24/7</div>
+                    <div class="why-ai-stat-label">AI-Powered Optimization</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Client <span class="gradient-text">Success Stories</span></h2>
+            <p class="section-subtitle">See how we've transformed businesses across industries</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">MNM transformed our entire marketing operation. The AI-powered content they create performs 3x better than anything we produced in-house. Game changer for our crypto launch.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>James Mitchell</h4>
+                            <p>CEO, TechFlow Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">As a consultant, I was skeptical about AI marketing. MNM proved me wrong—my lead pipeline tripled in 60 days. Their team genuinely understands the creator economy.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <p>Business Consultant</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">The speed and quality MNM delivers is unmatched. They handle our entire TikTok and Instagram presence while we focus on product. Best decision we made this year.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Alex Kim</h4>
+                            <p>Founder, CreatorStudio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 class="section-title">Service <span class="gradient-text">Calculator</span></h2>
+            <p class="section-subtitle">Build your custom package across all industries</p>
+            
+            <div class="glass-panel">
+                <div class="form-grid">
+                    <div class="calc-form-group">
+                        <label>Select Your Industry</label>
+                        <select id="calc-industry" onchange="updateIndustryServices()">
+                            <option value="">Choose Industry...</option>
+                            <option value="crypto">Crypto & Web3</option>
+                            <option value="ecommerce">E-Commerce</option>
+                            <option value="creators">Creators & Influencers</option>
+                            <option value="content">Content Production</option>
+                            <option value="business">Consultants & SMBs</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-form-group">
+                        <label>Select Service</label>
+                        <select id="calc-service" onchange="calculatePrice()" disabled>
+                            <option value="">Select Industry First...</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="calc-result" class="result-box">
+                    <div class="result-header">
+                        <div>
+                            <div style="color: #9ca3af; font-size: 14px; margin-bottom: 4px;">Estimated Investment</div>
+                            <div id="calc-price" class="price-display">$0</div>
+                        </div>
+                        <button onclick="addToQuote()" class="btn-primary">Add to Quote</button>
+                    </div>
+                </div>
+                
+                <div id="quote-summary" class="quote-summary">
+                    <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 16px;">Your Custom Package</h3>
+                    <div id="quote-items"></div>
+                    <div class="quote-total">
+                        <div style="font-size: 20px; font-weight: bold;">
+                            Total Investment: <span id="quote-total" style="color: #00f3ff;">$0</span>
+                        </div>
+                        <button onclick="submitQuote()" class="btn-gradient">Request Proposal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Packages -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Packages</span></h2>
+            <p class="section-subtitle">Popular bundles designed for maximum ROI</p>
+            
+            <div class="packages-grid">
+                <!-- Crypto Package -->
+                <div class="package-card">
+                    <span class="vertical-badge badge-crypto">🚀 CRYPTO</span>
+                    <div class="package-label" style="color: #00f3ff;">LAUNCH</div>
+                    <h3 class="package-title">Token Launch Package</h3>
+                    <div class="package-price" style="color: #00f3ff;">$4,420</div>
+                    <ul class="feature-list">
+                        <li>Moontok + CnToken Listings</li>
+                        <li>24h Trending Campaign</li>
+                        <li>Community Shillers (100)</li>
+                        <li>CG/CMC Fast Track</li>
+                        <li>Social Media Setup</li>
+                        <li>Press Release (500 sites)</li>
+                    </ul>
+                    <button onclick="addPackage('crypto')" class="btn-primary" style="width: 100%;">Select Package</button>
+                </div>
+                
+                <!-- E-commerce Package -->
+                <div class="package-card featured">
+                    <div class="package-badge">POPULAR</div>
+                    <span class="vertical-badge badge-ecommerce">🛒 E-COMMERCE</span>
+                    <div class="package-label" style="color: #bc13fe;">SCALE</div>
+                    <h3 class="package-title">E-Commerce Growth</h3>
+                    <div class="package-price" style="color: #bc13fe;">$2,499</div>
+                    <ul class="feature-list">
+                        <li>Facebook, Instagram & TikTok Ads</li>
+                        <li>Google Shopping Setup</li>
+                        <li>Email Marketing Flows</li>
+                        <li>Conversion Optimization</li>
+                        <li>Retargeting Campaigns</li>
+                        <li>Monthly Analytics Report</li>
+                    </ul>
+                    <button onclick="addPackage('ecommerce')" class="btn-gradient" style="width: 100%;">Select Package</button>
+                </div>
+                
+                <!-- TikTok Package -->
+                <div class="package-card">
+                    <span class="vertical-badge badge-creator">📱 TIKTOK</span>
+                    <div class="package-label" style="color: #ff006e;">VIRAL</div>
+                    <h3 class="package-title">TikTok Domination</h3>
+                    <div class="package-price" style="color: #ff006e;">$1,499</div>
+                    <ul class="feature-list">
+                        <li>Account Strategy & Optimization</li>
+                        <li>Content Calendar (30 days)</li>
+                        <li>Trending Audio/Hashtag Research</li>
+                        <li>Posting & Engagement</li>
+                        <li>Analytics & Optimization</li>
+                        <li>Viral Growth Tactics</li>
+                    </ul>
+                    <button onclick="addPackage('tiktok')" class="btn-primary" style="width: 100%; background: #ff006e;">Select Package</button>
+                </div>
+
+                <!-- 3D Animation Package -->
+                <div class="package-card">
+                    <span class="vertical-badge badge-content">🎬 CONTENT</span>
+                    <div class="package-label" style="color: #fbbf24;">PREMIUM</div>
+                    <h3 class="package-title">3D Motion Design</h3>
+                    <div class="package-price" style="color: #fbbf24;">$2,999</div>
+                    <ul class="feature-list">
+                        <li>3D Logo Animation</li>
+                        <li>Product Visualization</li>
+                        <li>Motion Graphics Package</li>
+                        <li>Character Design</li>
+                        <li>Virtual World Elements</li>
+                        <li>Social Media Adaptations</li>
+                    </ul>
+                    <button onclick="addPackage('animation')" class="btn-primary" style="width: 100%; background: #fbbf24; color: black;">Select Package</button>
+                </div>
+
+                <!-- Influencer Management -->
+                <div class="package-card featured">
+                    <div class="package-badge">FULL-SERVICE</div>
+                    <span class="vertical-badge badge-creator">🤝 INFLUENCER</span>
+                    <div class="package-label" style="color: #bc13fe;">CAMPAIGNS</div>
+                    <h3 class="package-title">Influencer Management</h3>
+                    <div class="package-price" style="color: #bc13fe;">$3,500</div>
+                    <ul class="feature-list">
+                        <li>Influencer Identification (50+)</li>
+                        <li>Outreach & Negotiation</li>
+                        <li>Campaign Strategy</li>
+                        <li>Content Briefs & Guidelines</li>
+                        <li>Performance Tracking</li>
+                        <li>Relationship Management</li>
+                    </ul>
+                    <button onclick="addPackage('influencer')" class="btn-gradient" style="width: 100%;">Select Package</button>
+                </div>
+
+                <!-- UGC Package -->
+                <div class="package-card">
+                    <span class="vertical-badge badge-content">🎥 UGC</span>
+                    <div class="package-label" style="color: #fbbf24;">AUTHENTIC</div>
+                    <h3 class="package-title">UGC Creation</h3>
+                    <div class="package-price" style="color: #fbbf24;">$1,200</div>
+                    <ul class="feature-list">
+                        <li>10 UGC Videos (15-60s)</li>
+                        <li>Creator Matching (5 creators)</li>
+                        <li>Script Writing</li>
+                        <li>Platform Optimization</li>
+                        <li>Usage Rights Included</li>
+                        <li>2 Rounds of Revisions</li>
+                    </ul>
+                    <button onclick="addPackage('ugc')" class="btn-primary" style="width: 100%; background: #fbbf24; color: black;">Select Package</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Ready to <span class="gradient-text">10x Your Marketing?</span></h2>
+            <p>Join the future of marketing. Get a free strategy session and see how AI can transform your growth trajectory.</p>
+            
+            <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Doe" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company</label>
+                        <input type="text" placeholder="Your Company">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Industry</label>
+                    <select required>
+                        <option value="">Select your industry...</option>
+                        <option value="crypto">Crypto & Web3</option>
+                        <option value="ecommerce">E-Commerce</option>
+                        <option value="creator">Creator/Influencer</option>
+                        <option value="consultant">Consultant/Coach</option>
+                        <option value="smb">Small Business</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tell us about your goals</label>
+                    <textarea placeholder="What are you looking to achieve? What's your current biggest marketing challenge?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Get Your Free Strategy Session</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MNM<span>AGENCY</span></div>
+            <div>
+                <div class="footer-note">© 2026 MNM Agency. All rights reserved.</div>
+                <div style="color: #444; font-size: 12px; margin-top: 4px;">Crypto • E-commerce • TikTok • 3D Animation • Influencers • UGC • Business</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Growth Journey Modal -->
+    <div id="growthModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeGrowthModal()">×</button>
+            <h3>Start Your Growth Journey</h3>
+            <p>Enter your email and we'll send you a free AI marketing audit for your business.</p>
+            <form class="modal-form" onsubmit="handleModalSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Get Free Audit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Complete Service Database
+        const servicesDB = {
+            crypto: [
+                {name: "CG Listing (Fast Track)", price: 845, category: "crypto", icon: "🚀"},
+                {name: "CMC Listing (Fast Track)", price: 7020, category: "crypto", icon: "🚀"},
+                {name: "Listings Package", price: 4420, category: "crypto", icon: "🚀"},
+                {name: "24h Trending Package", price: 4420, category: "crypto", icon: "🚀"},
+                {name: "Web3 Wallet Package", price: 5850, category: "crypto", icon: "🚀"},
+                {name: "Community Shillers", price: 1300, category: "crypto", icon: "🚀"},
+                {name: "Press Release (500 sites)", price: 975, category: "crypto", icon: "🚀"}
+            ],
+            ecommerce: [
+                {name: "Meta Ads Management", price: 1499, category: "ecommerce", icon: "🛒"},
+                {name: "Google Ads Management", price: 1299, category: "ecommerce", icon: "🛒"},
+                {name: "Google Shopping Setup", price: 899, category: "ecommerce", icon: "🛒"},
+                {name: "Email Marketing Flows", price: 1100, category: "ecommerce", icon: "🛒"},
+                {name: "Shopify Optimization", price: 2500, category: "ecommerce", icon: "🛒"},
+                {name: "CRO Audit", price: 650, category: "ecommerce", icon: "🛒"}
+            ],
+            tiktok: [
+                {name: "TikTok Full Management", price: 1499, category: "tiktok", icon: "📱"},
+                {name: "TikTok Strategy Only", price: 650, category: "tiktok", icon: "📱"},
+                {name: "TikTok Content (10 videos)", price: 800, category: "tiktok", icon: "📱"},
+                {name: "TikTok Ads Management", price: 1200, category: "tiktok", icon: "📱"}
+            ],
+            content: [
+                {name: "3D Logo Animation", price: 850, category: "content", icon: "🎬"},
+                {name: "3D Product Visualization", price: 1200, category: "content", icon: "🎬"},
+                {name: "Motion Graphics Package", price: 950, category: "content", icon: "🎬"},
+                {name: "Character Design & Animation", price: 2500, category: "content", icon: "🎬"},
+                {name: "Virtual World Design", price: 3500, category: "content", icon: "🎬"}
+            ],
+            influencer: [
+                {name: "Influencer Campaign Mgmt", price: 3500, category: "influencer", icon: "🤝"},
+                {name: "Influencer Identification", price: 800, category: "influencer", icon: "🤝"},
+                {name: "Outreach & Negotiation", price: 1200, category: "influencer", icon: "🤝"},
+                {name: "Campaign Strategy", price: 950, category: "influencer", icon: "🤝"}
+            ],
+            ugc: [
+                {name: "UGC Package (10 Videos)", price: 1200, category: "ugc", icon: "🎥"},
+                {name: "UGC Creator Matching", price: 350, category: "ugc", icon: "🎥"},
+                {name: "Script Writing (10)", price: 300, category: "ugc", icon: "🎥"},
+                {name: "UGC for TikTok (5)", price: 650, category: "ugc", icon: "🎥"}
+            ],
+            creators: [
+                {name: "DM Automation Setup", price: 499, category: "creators", icon: "📸"},
+                {name: "Organic Growth Mgmt", price: 299, category: "creators", icon: "📸"},
+                {name: "Brand Partnership Outreach", price: 450, category: "creators", icon: "📸"},
+                {name: "Content Strategy", price: 650, category: "creators", icon: "📸"}
+            ],
+            business: [
+                {name: "LinkedIn Lead Gen", price: 799, category: "business", icon: "💼"},
+                {name: "Local SEO Package", price: 650, category: "business", icon: "💼"},
+                {name: "Appointment Setting", price: 950, category: "business", icon: "💼"},
+                {name: "Website Design (5pg)", price: 1800, category: "business", icon: "💼"}
+            ]
+        };
+
+        // All services flattened for filtering
+        const allServices = [
+            ...servicesDB.crypto,
+            ...servicesDB.ecommerce,
+            ...servicesDB.tiktok,
+            ...servicesDB.content,
+            ...servicesDB.influencer,
+            ...servicesDB.ugc,
+            ...servicesDB.creators,
+            ...servicesDB.business
+        ];
+
+        // Packages
+        const packages = {
+            crypto: {name: "Token Launch Package", price: 4420},
+            ecommerce: {name: "E-Commerce Growth", price: 2499},
+            tiktok: {name: "TikTok Domination", price: 1499},
+            animation: {name: "3D Motion Design", price: 2999},
+            influencer: {name: "Influencer Management", price: 3500},
+            ugc: {name: "UGC Creation", price: 1200},
+            business: {name: "B2B Lead System", price: 1299},
+            instagram: {name: "Instagram 10K Growth", price: 299},
+            enterprise: {name: "Full-Service Agency", price: 5000}
+        };
+
+        // Quote state
+        let quoteItems = [];
+        let quoteTotal = 0;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initServices();
+            
+            // Open first category
+            const firstCat = document.getElementById('cat-crypto');
+            if (firstCat) {
+                firstCat.classList.add('open');
+                firstCat.style.maxHeight = firstCat.scrollHeight + 'px';
+            }
+        });
+
+        function initServices() {
+            const grid = document.getElementById('services-grid');
+            const featured = allServices.slice(0, 6);
+            
+            grid.innerHTML = featured.map(service => `
+                <div class="service-card" onclick="addServiceToQuote('${service.name}', ${service.price})">
+                    <div class="service-header">
+                        <div class="service-icon">${service.icon}</div>
+                        <div class="service-price">$${service.price.toLocaleString()}</div>
+                    </div>
+                    <h3 class="service-title">${service.name}</h3>
+                    <p class="service-desc">Click to add to calculator</p>
+                    <span class="service-tag">${service.category.toUpperCase()}</span>
+                </div>
+            `).join('');
+        }
+
+        function filterServices(filter) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            const grid = document.getElementById('services-grid');
+            let filtered = [];
+            
+            if (filter === 'all') {
+                filtered = allServices;
+            } else if (filter === 'paid') {
+                filtered = allServices.filter(s => 
+                    s.name.includes('Ads') || s.name.includes('Shopping')
+                );
+            } else if (filter === 'social') {
+                filtered = allServices.filter(s => 
+                    s.name.includes('Social') || s.name.includes('Instagram') || s.name.includes('TikTok')
+                );
+            } else if (filter === 'automation') {
+                filtered = allServices.filter(s => 
+                    s.name.includes('Automation') || s.name.includes('DM') || s.name.includes('Email')
+                );
+            } else if (filter === 'content') {
+                filtered = allServices.filter(s => 
+                    s.name.includes('3D') || s.name.includes('Motion') || s.name.includes('Animation') || s.name.includes('UGC')
+                );
+            } else if (filter === 'influencer') {
+                filtered = allServices.filter(s => 
+                    s.category === 'influencer' || s.name.includes('Influencer')
+                );
+            } else {
+                filtered = allServices.filter(s => s.category === filter);
+            }
+            
+            grid.innerHTML = filtered.slice(0, 6).map(service => `
+                <div class="service-card" onclick="addServiceToQuote('${service.name}', ${service.price})">
+                    <div class="service-header">
+                        <div class="service-icon">${service.icon}</div>
+                        <div class="service-price">$${service.price.toLocaleString()}</div>
+                    </div>
+                    <h3 class="service-title">${service.name}</h3>
+                    <p class="service-desc">Click to add to calculator</p>
+                    <span class="service-tag">${service.category.toUpperCase()}</span>
+                </div>
+            `).join('');
+        }
+
+        function filterByVertical(vertical) {
+            document.getElementById('calc-industry').value = vertical;
+            updateIndustryServices();
+            document.getElementById('calculator').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function updateIndustryServices() {
+            const industry = document.getElementById('calc-industry').value;
+            const serviceSelect = document.getElementById('calc-service');
+            
+            if (!industry) {
+                serviceSelect.disabled = true;
+                serviceSelect.innerHTML = '<option value="">Select Industry First...</option>';
+                return;
+            }
+            
+            serviceSelect.disabled = false;
+            serviceSelect.innerHTML = '<option value="">Choose Service...</option>';
+            
+            servicesDB[industry].forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.price;
+                option.setAttribute('data-name', service.name);
+                option.textContent = `${service.name} - $${service.price.toLocaleString()}`;
+                serviceSelect.appendChild(option);
+            });
+            
+            document.getElementById('calc-result').style.display = 'none';
+        }
+
+        function calculatePrice() {
+            const select = document.getElementById('calc-service');
+            const option = select.options[select.selectedIndex];
+            const price = option.value;
+            
+            if (price) {
+                document.getElementById('calc-price').textContent = '$' + parseInt(price).toLocaleString();
+                document.getElementById('calc-result').style.display = 'block';
+            }
+        }
+
+        function addToQuote() {
+            const select = document.getElementById('calc-service');
+            const option = select.options[select.selectedIndex];
+            const name = option.getAttribute('data-name');
+            const price = parseInt(option.value);
+            
+            if (!name || !price) return;
+            
+            quoteItems.push({name, price});
+            quoteTotal += price;
+            updateQuoteDisplay();
+        }
+
+        function addServiceToQuote(name, price) {
+            quoteItems.push({name, price});
+            quoteTotal += price;
+            updateQuoteDisplay();
+            document.getElementById('calculator').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function addPackage(type) {
+            const pkg = packages[type];
+            quoteItems.push({name: pkg.name, price: pkg.price});
+            quoteTotal += pkg.price;
+            updateQuoteDisplay();
+            document.getElementById('calculator').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function updateQuoteDisplay() {
+            const summary = document.getElementById('quote-summary');
+            const itemsList = document.getElementById('quote-items');
+            const totalDisplay = document.getElementById('quote-total');
+            
+            if (quoteItems.length === 0) {
+                summary.style.display = 'none';
+                return;
+            }
+            
+            summary.style.display = 'block';
+            
+            itemsList.innerHTML = quoteItems.map((item, index) => `
+                <div class="quote-item">
+                    <span>${item.name}</span>
+                    <div>
+                        <span class="quote-price">$${item.price.toLocaleString()}</span>
+                        <button class="remove-btn" onclick="removeItem(${index})">×</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            totalDisplay.textContent = '$' + quoteTotal.toLocaleString();
+        }
+
+        function removeItem(index) {
+            quoteTotal -= quoteItems[index].price;
+            quoteItems.splice(index, 1);
+            updateQuoteDisplay();
+        }
+
+        function submitQuote() {
+            if (quoteItems.length === 0) return;
+            
+            const message = `Hi MNM Agency! I'm interested in the following services:\n\n${quoteItems.map(i => `• ${i.name}: $${i.price.toLocaleString()}`).join('\n')}\n\nTotal: $${quoteTotal.toLocaleString()}\n\nPlease contact me with next steps.`;
+            
+            window.open(`https://t.me/yourusername?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function toggleCategory(contentId, arrowId) {
+            const content = document.getElementById(contentId);
+            const arrow = document.getElementById(arrowId);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                content.style.maxHeight = '0px';
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Growth Journey Modal Functions
+        function openGrowthModal() {
+            document.getElementById('growthModal').classList.add('active');
+        }
+
+        function closeGrowthModal() {
+            document.getElementById('growthModal').classList.remove('active');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            alert('Thanks! Check your email for your free AI marketing audit.');
+            closeGrowthModal();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Thanks for reaching out! Our team will contact you within 24 hours to schedule your free strategy session.');
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('growthModal');
+            if (event.target === modal) {
+                closeGrowthModal();
+            }
+        }
+
+        console.log('MNM Agency 2026 - AI-Powered Marketing');
+    </script>
+
+</body>
+</html>
